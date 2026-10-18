@@ -1,0 +1,46 @@
+name: Wrong or missing name / icon · 이름·아이콘 오류
+description: An enemy, stratagem, objective, booster or gear shows the wrong name or no icon. · 적, 스트라타젬, 목표, 부스터, 장비의 이름이나 아이콘이 틀리거나 없습니다.
+labels: [name-icon]
+body:
+  - type: dropdown
+    id: kind
+    attributes:
+      label: What kind · 종류
+      options:
+        - Enemy · 적
+        - Stratagem · 스트라타젬
+        - Objective · 목표
+        - Booster · 부스터
+        - Gear (armor, weapon, throwable) · 장비
+        - Planet · 행성
+        - Other · 기타
+    validations:
+      required: true
+  - type: input
+    id: shown
+    attributes:
+      label: What the viewer shows · 뷰어에 보이는 것
+      description: The name or ID as shown, or "no icon". · 화면에 보이는 이름이나 ID, 또는 "아이콘 없음"
+    validations:
+      required: true
+  - type: input
+    id: correct
+    attributes:
+      label: What it should be · 올바른 이름
+      description: The in-game name, if you know it. Please do not guess. · 게임 안의 이름을 알면 적어 주세요. 추측은 빼 주세요.
+  - type: input
+    id: link
+    attributes:
+      label: Share link and time · 공유 링크와 시각
+      description: Where it shows up, e.g. https://hd2-replay.code0987.me/s/… at 12:34. Do not attach raw logs. · 로그 원본 대신 공유 링크
+  - type: dropdown
+    id: language
+    attributes:
+      label: Viewer language · 뷰어 언어
+      options:
+        - 한국어
+        - English
+  - type: textarea
+    id: extra
+    attributes:
+      label: Screenshot or source · 스크린샷이나 근거

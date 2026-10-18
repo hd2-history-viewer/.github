@@ -1,0 +1,35 @@
+name: Wording or translation · 문구·번역 수정
+description: A Korean or English sentence in the viewer reads wrong. · 뷰어의 한국어나 영어 문장이 어색하거나 틀렸습니다.
+labels: [translation]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        You can also open a pull request against `lang/ko.json` or `lang/en.json` directly. · `lang/ko.json`이나 `lang/en.json`을 직접 고치는 풀 리퀘스트도 환영합니다.
+  - type: dropdown
+    id: language
+    attributes:
+      label: Language · 언어
+      options:
+        - 한국어
+        - English
+        - Both · 둘 다
+    validations:
+      required: true
+  - type: input
+    id: current
+    attributes:
+      label: Current text · 지금 문구
+    validations:
+      required: true
+  - type: input
+    id: suggested
+    attributes:
+      label: Suggested text · 고친 문구
+    validations:
+      required: true
+  - type: input
+    id: where
+    attributes:
+      label: Where it appears · 나오는 곳
+      description: Screen or menu, e.g. "Library → expiry". · 화면이나 메뉴

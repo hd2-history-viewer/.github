@@ -1,0 +1,19 @@
+name: Idea · 제안
+description: A feature or change you would like. · 원하는 기능이나 바꾸고 싶은 점
+labels: [enhancement]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Check the roadmap on the site first (header menu → Roadmap). · 먼저 사이트의 로드맵(상단 메뉴 → 로드맵)을 확인해 주세요.
+  - type: textarea
+    id: idea
+    attributes:
+      label: Idea · 제안
+      description: What you would like and why it would help. · 무엇을 원하고 왜 도움이 되는지
+    validations:
+      required: true
+  - type: textarea
+    id: extra
+    attributes:
+      label: Examples or screenshots · 예시나 스크린샷
